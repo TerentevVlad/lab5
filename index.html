@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title> Лабораторная работа №5</title>
+	
+<style>
+   * {
+    border: 5px; border-color: black; padding: 10px;
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */
+   }
+</style>
+
+<script>
+
+var addEvents = function (e)
+	{
+		var newWin = window.open("", "", "width=800,height=600");
+		var main = Array.from( document.querySelectorAll('*')  );
+
+		newWin.document.write( main [1].innerHTML);
+		newWin.document.write( "\n"); 
+		newWin.document.write( "\n");
+		newWin.document.write(e.target.innerHTML);
+	}
+	
+    var all_tags = document.getElementsByTagName('*');
+     for(var i = 0;i<all_tags.length; i++){
+        if(all_tags[i].tagName != undefined){
+            all_tags[i].addEventListener('click', addEvents, false);
+        }
+     }
+	
+</script>
+
+
+</head>
+	<body> (тег body)
+		<p> Нажмите для перехода к поиску (тег p) </p>
+		<ul> (тег ul)
+			<li> (тег li)  <a href = "http://yandex.ru">Яндекс</a> </li>
+			<li> (тег li)  <a href = "http://yandex.ru">Яндекс</a> </li>
+			<li> (тег li)  <a href = "http://yandex.ru">Яндекс</a> </li>
+		</ul>
+		
+		<ul>
+			<li> (тег li)  <a href = "http://google.com">Google</a> </li>
+			<li> (тег li)  <a href = "http://google.com">Google</a> </li>
+			<li> (тег li)  <a href = "http://google.com">Google</a> </li>
+		</ul>
+		
+		<table> (тег table) 
+			<tr><th>текст заголовка</th><th>текст заголовка</th></tr> <!--ряд с ячейками заголовков-->
+			<tr><td>данные</td><td>данные</td></tr> <!--ряд с ячейками тела таблицы-->
+		</table>
+		
+	</body>
+</html>
